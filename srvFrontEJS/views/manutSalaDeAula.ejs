@@ -7,10 +7,14 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1>Manutenção de Salas de Aula</h1>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
+        <header class="text-center mb-5">
+            <h1 class="display-5">Manutenção de Salas de Aula</h1>
+            <p class="text-muted">Gerencie as informações das salas cadastradas.</p>
+        </header>
+
+        <table class="table table-striped table-hover table-bordered">
+            <thead class="table-dark">
+                <tr class="text-center">
                     <th>ID</th>
                     <th>Descrição</th>
                     <th>Localização</th>
@@ -20,15 +24,22 @@
             <tbody>
                 <% salas.forEach(sala => { %>
                     <tr>
-                        <td><%= sala.id %></td>
+                        <td class="text-center"><%= sala.id %></td>
                         <td><%= sala.descricao %></td>
                         <td><%= sala.localizacao %></td>
-                        <td><%= sala.capacidade %></td>
+                        <td class="text-center"><%= sala.capacidade %></td>
                     </tr>
                 <% }); %>
             </tbody>
         </table>
-        <a href="/" class="btn btn-secondary mt-3">Voltar para a Página Inicial</a>
+
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-secondary">Voltar para a Página Inicial</a>
+        </div>
     </div>
+
+    <footer class="text-center mt-5 py-3 bg-light">
+        <p class="mb-0 text-muted">© 2024 Sistema ERP de Salas de Aula</p>
+    </footer>
 </body>
 </html>
